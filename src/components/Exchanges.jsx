@@ -42,7 +42,7 @@ const Exchanges = () => {
                     </Select>
                 </Col>
                 <Col xs={12} md={8} className='exchange-header'>
-                    Total 24-Hour Volume: {millify(exchangeList?.data?.stats['24hVolume'])}
+                    Total 24-Hour Volume: {!isFetching && millify(exchangeList?.data?.stats['24hVolume'])}
                 </Col>
                 <Col xs={12} md={8} className='exchange-header'>
                     Total Exchanges: {exchangeList?.data?.stats.total}
