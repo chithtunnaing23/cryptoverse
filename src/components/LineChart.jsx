@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Row, Col } from 'antd';
+import { Typography, Row} from 'antd';
 import millify from 'millify';
 import { Line } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
@@ -13,7 +13,7 @@ const LineChart = ({currencyName, currencyHistory, currentPrice}) => {
   const timeStamps = [];
   const cryptoPrices = [];
 
-  for (let i = currencyHistory.data?.history?.length - 1; i >= 0 && i != undefined; i--){
+  for (let i = currencyHistory.data?.history?.length - 1; i >= 0 && i !== undefined; i--){
     timeStamps.push(new Date(currencyHistory.data.history[i].timestamp * 1000).toLocaleDateString());
     cryptoPrices.push(currencyHistory.data.history[i].price);
   }
