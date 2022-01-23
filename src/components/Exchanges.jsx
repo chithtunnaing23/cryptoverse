@@ -76,7 +76,7 @@ const Exchanges = () => {
                             key={exchange.uuid}
                             showArrow={false}
                         >
-                            <a href={exchange.coinrankingUrl} target='_blank' referrerPolicy='no-referrer'>
+                            <a href={exchange.coinrankingUrl} target='_blank' rel='noreferrer'>
                                 Learn more in Coin Ranking
                             </a>
                         </Panel>

@@ -21,7 +21,6 @@ const CryptoDetails = () => {
     if(isFetching) return 'Loading ...';
 
     const cryptoDetails = cryptoDetailsData?.data?.coin;
-    const time = ['3h', '24h', '7d', '30d', '3m', '1y', '3y', '5y']
     const stats = [
         { title: 'Price to USD', value: `$ ${cryptoDetails.price && millify(cryptoDetails.price)}`, icon: <DollarCircleOutlined /> },
         { title: 'Rank', value: cryptoDetails.rank, icon: <NumberOutlined /> },
@@ -54,7 +53,7 @@ const CryptoDetails = () => {
                 placeholder='Select Time Period'
                 onChange={(value) => setTimePeriod(value)}
             >
-                {time.map((item) => (
+                {['3h', '24h', '7d', '30d', '3m', '1y', '3y', '5y'].map((item) => (
                     <Option value={item} key={item}>{item}</Option>
                 ))}
             </Select>
@@ -118,7 +117,7 @@ const CryptoDetails = () => {
                             <Title level={5} className='link-name'>
                                 {link.type}
                             </Title>
-                            <a href={link.url} target='_blank' rel='no-referrer'>
+                            <a href={link.url} target='_blank' rel='noreferrer'>
                                 {link.name}
                             </a>
                         </Row>
