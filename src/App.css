@@ -14,6 +14,11 @@
     box-sizing: border-box;
 }
 
+#for temporary
+.ant-typography h2, h2.ant-typography {
+    font-size: 26px !important;
+}
+
 a:hover{
     color: var(--pink) !important;
 }
